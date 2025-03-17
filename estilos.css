@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-color: #053076;
+    --text-color: #fff;
+}
+
+#btnMenu,label{
+    display: none;
+}
+
+.header .navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 15px;
+    align-items: center;
+    background: var(--bg-color);
+
+}
+
+.header .navbar span{
+    font-size: 25px;
+    color: var(--text-color);
+}
+
+.header .navbar .menu{
+    display: flex;
+}
+
+.header .navbar .menu li{
+    list-style-type: none;
+}
+
+.header .navbar .menu li a{
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 20px;
+}
+
+/*SECCIÓN HOME*/
+
+.home .home__container{
+    width: 100%;
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/bg1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.home__container h2{
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 200;
+}
+
+.home__container p{
+    color: var(--text-color);
+    font-weight: 100;
+    text-align: center;
+}
+
+.home__container button{
+    display: block;
+    width: 250px;
+    margin-top: 10px;
+    padding: 15px 20px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*SECCIÓN DE PROYECTOS*/
+.proyectos .proyectos__container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    padding: 40px 50px;
+}
+
+.proyectos  h2{
+    text-align: center;
+    font-size: 40px;
+    padding: 20px 15px;
+}
+
+.proyectos__container .proyectos__card{
+    width: 600px;
+    height: 550px;
+    border: 1px solid brown;
+    border-radius: 10px;
+    background-color: rgb(128, 35, 35);
+    color: var(--text-color);
+    padding: 14px 15px;
+}
+
+.sobre-nosotros{
+    background-color: #171717;
+    color: var(--text-color);
+    padding: 60px 20px;
+    margin-top: 440px;
+}
+
+.sobre-nosotros .container{
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+    align-items: center;
+}
+
+.sobre-nosotros .container .info h2{
+    font-size: 36px;
+    color: #feb703;
+    margin-bottom: 10px;
+}
+
+.sobre-nosotros .container .info p{
+    font-size: 18px;
+    color: #ddd;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.sobre-nosotros .container .info h3{
+    font-size: 24px;
+    color: #feb703;
+    margin-bottom: 10px;
+}
+
+.sobre-nosotros .container .info .tech-icons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.sobre-nosotros .container .info .tech-icons span{
+    background: #222;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.sobre-nosotros .container .info .tech-icons .image img{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+
+@media screen and (max-width:768px) {
+    label{
+        display: block;
+    }
+
+    .header .navbar{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar .logo{
+        width: 100% ;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .navbar .logo i{
+        font-size: 25px;
+        cursor: pointer;
+        color: var(--text-color);
+    }
+
+    .header .navbar .menu{
+        position: absolute;
+        width: 100%;
+        flex-direction: column;
+        margin-top: 92px;
+        background: #131313;
+        margin-left: -400%;
+        transition: all ease .4s;
+    }
+
+    .header .navbar .menu.active{
+        margin-left: 0;
+    }
+
+    .home .home__container{
+        padding: 15px 20px;
+        text-align: center;
+    }
+
+    .home .home__container h2{
+        text-align: center;
+        line-height: 1;
+    }
+
+    .proyectos .proyectos__container {
+        grid-template-columns: repeat(1,1fr)
+    }
+
+    .proyectos__container .proyectos__card{
+        width: 470px;
+        height: 500px;
+        margin-left: -15px;
+    }
+
+    .proyectos__container .proyectos__card .img_bg{
+        width: 440px;
+    }
+
+}
